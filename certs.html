@@ -28,6 +28,68 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+    
+    .cert-card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+    
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+    
+    .cert-image {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      background: #f8fafc;
+      padding: 1rem;
+    }
+    
+    .cert-content {
+      padding: 1.5rem;
+    }
+    
+    .cert-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 0.5rem;
+    }
+    
+    .cert-issuer {
+      font-size: 1rem;
+      color: #4a5568;
+      margin-bottom: 1rem;
+    }
+    
+    .cert-link {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #149ddd;
+      color: white;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    
+    .cert-link:hover {
+      background: #0056b3;
+      color: white;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: iPortfolio
   * Updated: Nov 17 2023 with Bootstrap v5.3.2
@@ -74,45 +136,39 @@
   <main id="main">
   
   <!-- ======= Certifications Section ======= -->
-    <section id="awards" class="awards section-bg">
-      <div class="container" >
-
-        <div class="section-title">
+    <section id="certifications" class="section-bg">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
           <h2>Certifications</h2>
-          <p>Related Certifications and Courses</p>
-        </div>
-<!--         <div class="row">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/assets/img/certs/pjpt.png" alt="PJPT">
-            <div class="card-body">
-              <h5 class="card-title">Practical Junior Penetration Tester (PJPT)</h5>
-              <p class="card-text">TCM Security</p>
-              <a href="https://certifications.tcm-sec.com/pjpt/" class="btn btn-primary">More</a>
-            </div>
-          </div> -->
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/assets/img/certs/CEH_Badge.png" alt="CEH">
-            <div class="card-body">
-              <h5 class="card-title">Certified Ethical Hacker (CEH)</h5>
-              <p class="card-text">EC-Council</p>
-              <a href="https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/" class="btn btn-primary">More</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="/assets/img/certs/coursera.png" alt="Coursera">
-                <div class="card-body">
-                  <h5 class="card-title">Technical Support Fundamentals</h5>
-                  <p class="card-text">Coursera</p>
-                  <a href="https://www.coursera.org/learn/technical-support-fundamentals" class="btn btn-primary">More</a>
-            </div>
-          </div>
-        </div>
-          </div>
+          <p>Professional Certifications & Courses</p>
         </div>
 
+        <div class="cert-grid" data-aos="fade-up">
+          <div class="cert-card">
+            <img class="cert-image" src="/assets/img/certs/CEH_Badge.png" alt="CEH Certification">
+            <div class="cert-content">
+              <h3 class="cert-title">Certified Ethical Hacker (CEH)</h3>
+              <p class="cert-issuer">EC-Council</p>
+              <a href="https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/" class="cert-link" target="_blank">
+                Learn More <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="cert-card">
+            <img class="cert-image" src="/assets/img/certs/coursera.png" alt="Coursera Certification">
+            <div class="cert-content">
+              <h3 class="cert-title">Technical Support Fundamentals</h3>
+              <p class="cert-issuer">Coursera</p>
+              <a href="https://www.coursera.org/learn/technical-support-fundamentals" class="cert-link" target="_blank">
+                Learn More <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- End Awards Section -->
+    <!-- End Certifications Section -->
     
   </main> 
   <!-- ======= Footer ======= -->
